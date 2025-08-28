@@ -7,14 +7,14 @@ import './SearchBar.css'
 
 export default function SearchBar() {
     return (
-        <div className="relative-flex-1">
+        <div className="bar-container">
             <TextField 
                 className="search-bar" 
                 id="search-bar" 
                 fullWidth
                 placeholder="Type a command: watch, fix, grow, benchmark..." 
                 variant="outlined" 
-                sx={{ input: { color: "white", width: 400 }}} 
+                sx={{ input: { color: "white", width: 400, height: 0}}} 
                 slotProps={{
                     input:{
                         endAdornment:(
