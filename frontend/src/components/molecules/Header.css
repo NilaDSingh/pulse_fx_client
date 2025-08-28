@@ -1,0 +1,28 @@
+.pulse-fx {
+    color: skyblue;
+    font-size: x-large;
+    height: 5px;
+}
+
+.pulse-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 200px; 
+}
+
+.description {
+    font-size: small;
+    color: #808080;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.icons {
+    font-size: small;
+    color: white;
+}

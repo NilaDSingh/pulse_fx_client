@@ -3,11 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import SearchBar from './components/atoms/SearchBar/SearchBar';
+import Header from './components/molecules/Header'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <SearchBar></SearchBar>
+    <div className='page'><Header></Header></div>
   </React.StrictMode>
 );
 
