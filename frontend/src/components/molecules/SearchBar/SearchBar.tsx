@@ -2,6 +2,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import MicNoneIcon from '@mui/icons-material/MicNone';
 import InputAdornment from '@mui/material/InputAdornment';
+import LibraryMenu from '../../atoms/LibraryMenu/LibraryMenu'
 
 import './SearchBar.css'
 
@@ -14,15 +15,22 @@ export default function SearchBar() {
                 fullWidth
                 placeholder="Type a command: watch, fix, grow, benchmark..." 
                 variant="outlined" 
-                sx={{ input: { color: "white", width: 400, height: 0}}} 
+                size='small'
+                sx={{ input: { color: "white", height: "0rem"}}} 
                 slotProps={{
                     input:{
                         endAdornment:(
-                            <InputAdornment position='end'><Button><MicNoneIcon className='mic' /></Button></InputAdornment>
+                            <InputAdornment position='end'>
+                                <div>
+                                    <MicNoneIcon fontSize="small" className='mic' />
+                                </div>
+                            </InputAdornment>
                         )
                     }
                 }}
                 />
+                <LibraryMenu></LibraryMenu>
+                <button className="parse-button">Parse</button>
         </div>
     );
 }

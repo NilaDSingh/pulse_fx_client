@@ -35,7 +35,7 @@
     "**/*.tsx",
     "src/components/OTP/stylesheet.ts",
     ".next/types/**/*.ts"
-, "src/components/atoms/SearchBar"  ],
+, "src/components/molecules/SearchBar"  ],
   "exclude": [
     "node_modules"
   ]

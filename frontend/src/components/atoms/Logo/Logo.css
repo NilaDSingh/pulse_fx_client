@@ -1,6 +1,12 @@
 .pulse-fx {
-    color: skyblue;
+    color: #26a9f1;
     font-size: large;
-    height: 10px;
+    height: 5px;
     margin-top: 0%;
+    display: flex;
+}
+
+.description {
+    font-size: small;
+    color: #a1a1a1;
 }

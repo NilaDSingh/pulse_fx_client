@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
-import SearchBar from './components/atoms/SearchBar/SearchBar';
-import Header from './components/molecules/Header'
+import SearchBar from './components/molecules/SearchBar/SearchBar';
+import Header from './components/molecules/Header/Header'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

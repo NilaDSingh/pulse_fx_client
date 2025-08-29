@@ -1,0 +1,28 @@
+.mic{
+    color: white;
+}
+
+.search-bar {
+    position: relative;
+    flex: 1;
+}
+
+.bar-container {
+    margin-top: 1rem;
+    align-items: center;
+    gap: 2%;
+    display: flex;
+}
+
+.parse-button {
+ color: white;
+ background: #26a9f1;
+ border-radius: 20%;
+ padding: 1.5%;
+ border: none;
+ outline: none;
+}
+
+.icons {
+    color: white;
+}
