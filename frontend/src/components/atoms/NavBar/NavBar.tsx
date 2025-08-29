@@ -2,18 +2,39 @@ import * as React from 'react';
 import { Tabs, Tab, Box, Typography, makeStyles } from '@mui/material';
 import { useState } from 'react';
 import { color } from 'framer-motion';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 
-export default function NavBar() {
+type CustomTabProps = {
+  tab1?:JSX.Element;
+  tab2?:JSX.Element;
+  tab3?:JSX.Element;
+};
+
+export default function NavBar({tab1, tab2,tab3}: CustomTabProps) {
   const [tab, setTab] = React.useState(0);
-  let tabTitles = ["Footprint Studio", "Automations & Approvals", "Change Log"]
+  let tabTitles = [
+    {
+      icon: <HomeOutlinedIcon fontSize='small'/>,
+      title:"Home"
+    }, 
+    {
+      icon: <SettingsOutlinedIcon fontSize='small'/>, 
+      title:"Automations"
+    },
+    {
+      icon: <WatchLaterOutlinedIcon fontSize='small'/>,
+      title:"Activity"
+    }
+  ]
 
   const tabStyles = {
     fontSize:'0.7rem',
     fontWeight:'bold',
     textTransform: 'none',
     minWidth: 30,
-    height: 10,
-    color: "#a1a1a1"
+    color: "#a1a1a1",
   }
 
   // uses index of tab to select
@@ -24,12 +45,12 @@ export default function NavBar() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Tabs value={tab} onChange={handleChange}>
-        {tabTitles.map((tab)=>{return(<Tab sx={tabStyles} label={tab}></Tab>)})}
+      <Tabs sx={{height:'3.5rem', marginTop:'-1rem'}} value={tab} onChange={handleChange}>
+        {tabTitles.map((tab)=>{return(<Tab disableRipple sx={tabStyles} label={tab.title} icon={tab.icon} iconPosition="start"></Tab>)})}
       </Tabs>
-      {tab === 0 && <Typography>Content for Tab One</Typography>}
-      {tab === 1 && <Typography>Content for Tab Two</Typography>}
-      {tab === 2 && <Typography>Content for Tab Three</Typography>}
+      {tab === 0 && <Typography>{tab1}</Typography>}
+      {tab === 1 && <Typography>{tab2}</Typography>}
+      {tab === 2 && <Typography>{tab3}</Typography>}
     </Box>
   )
 }

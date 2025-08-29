@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
-import SearchBar from './components/molecules/SearchBar/SearchBar';
 import Header from './components/molecules/Header/Header'
-
+import Home from './components/templates/Home/Home'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className='page'><Header></Header></div>
+    <div className='page'>
+      <Header tab1={<Home />}></Header>
+    </div>
   </React.StrictMode>
 );
 

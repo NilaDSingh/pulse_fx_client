@@ -15,7 +15,7 @@ export default function SearchBar() {
                 placeholder="Type a command: watch, fix, grow, benchmark..." 
                 variant="outlined" 
                 size='small'
-                sx={{ input: { color: "white", height: "0rem"}}} 
+                sx={{ input: { color: "white"}}} 
                 slotProps={{
                     input:{
                         endAdornment:(

@@ -80,6 +80,7 @@ export default function BasicMenu() {
       <Button
         className="library-button"
         onClick={anchorMenu}
+        variant='outlined'
         size='small'
         startIcon={<LibraryBooksOutlinedIcon/>}
         sx={{ 
