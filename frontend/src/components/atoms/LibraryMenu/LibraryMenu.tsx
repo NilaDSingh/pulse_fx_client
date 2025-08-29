@@ -12,71 +12,34 @@ const StyledListHeader = styled(ListSubheader)({
   backgroundImage: 'var(--Paper-overlay)',
 });
 
-// export default function GroupedMenu() {
-//   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-//   const [openMenu, setOpenMenu] = React.useState(false)
-//   const [menuOption, setMenuOption] = React.useState<string>('')
-//   const open = Boolean(openMenu);
-
-
-//   const toggleMenu = () => {
-//     setOpenMenu(!openMenu)
-//     console.log(openMenu)
-//   }
-
-//   const selectOption = (event: SelectChangeEvent<typeof menuOption>) => {
-//     console.log(event)
-//   }
-
-//   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-//     setAnchorEl(e.currentTarget);
-//     console.log(e.currentTarget)
-//     toggleMenu()
-//   };
-
-//   const handleClose = () => {
-//     setOpenMenu(false);
-//   };
-
-//   return (
-//     <div>
-//       <button
-//         id="library-button"
-//         onClick={toggleMenu}
-//       >
-//         Library
-//       </button>
-//       <Menu
-//         id="library-menu"
-//         onChange={selectOption}
-//         anchorEl={anchorEl}
-//         open={open}
-//         onClose={toggleMenu}
-//         slotProps={{
-//           list: {
-//             'aria-labelledby': 'basic-button',
-//             sx: {
-//               py: 0,
-//             },
-//           },
-//         }}
-//       >
-//         <StyledListHeader>Category 1</StyledListHeader>
-//         <MenuItem onClick={toggleMenu} value="Option 1">Option 1</MenuItem>
-//         <MenuItem onClick={toggleMenu} value="Option 2">Option 2</MenuItem>
-//         <StyledListHeader>Category 2</StyledListHeader>
-//         <MenuItem onClick={toggleMenu} value="Option 3">Option 3</MenuItem>
-//         <MenuItem onClick={toggleMenu} value="Option 4">Option 4</MenuItem>
-//       </Menu>
-//     </div>
-//   );
-// }
-
-
 export default function BasicMenu() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [selectedOption, setSelectedOption] = React.useState<string>("")
   const open = Boolean(anchorEl);
+
+  let menuItems=[
+    {
+      header:"Monitoring",
+      options:[
+        "watch Google Business Profile for rating drops below 4.2 every day",
+        "monitor website traffic drops > 20% weekly",
+        "track brand mentions sentiment daily"
+      ]},
+    {
+      header: "Fixes & Updates",
+      options: [
+        "fix broken links on company website by Friday mode:auto",
+        "update business hours across all platforms",
+        "claim unclaimed Yelp listing"
+      ]},
+    {
+      header: "Growth & Engagment",
+      options:[
+        "grow engagement rate to 3.5% by 60d using content_velocity=high",
+        "increase LinkedIn followers by 500 monthly",
+        "boost local search ranking to top 3"
+    ]}
+  ]
 
   // anchors options to library menu button for display purposes
   const anchorMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -89,9 +52,9 @@ export default function BasicMenu() {
   };
 
   // selects menu option and closes menu
-  const setOption = (event: any) => {
-    console.log(event.target.value)
-    setSelectedOption(event.target.value)
+  const setOption = (option:string) => {
+    console.log("item selected", option)
+    setSelectedOption(option)
     handleClose()
 
   }
@@ -116,24 +79,23 @@ export default function BasicMenu() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        slotProps={{}}
+        sx={{
+          width:'100%',
+          height:'25rem'
+        }}
       >
-        <StyledListHeader>Category 1</StyledListHeader>
-
-        <StyledListHeader>Monitoring</StyledListHeader>
-        <MenuItem onClick={setOption} value={1}>Watch Google</MenuItem>
-        
-        <StyledListHeader>Fixes & Updates</StyledListHeader>
-        <MenuItem onClick={setOption} value={2}>Fix Broken Links</MenuItem>
-        
-        <StyledListHeader>Growth & Engagement</StyledListHeader>
-        <MenuItem onClick={setOption} value={3}>grow engagement</MenuItem>
-        
-        <StyledListHeader>Content & Publishing</StyledListHeader>
-        <MenuItem onClick={setOption} value={3}>publish case study</MenuItem>
-        
-        <StyledListHeader>Analysis & Benchmarking</StyledListHeader>
-        <MenuItem onClick={setOption} value={3}>Benchmark</MenuItem>
+        <StyledListHeader>
+          <div>Prompt Library<div>Pre-built commands for common tasks</div></div>
+        </StyledListHeader>
+        {menuItems.map((item, itemIndex)=>{
+          return(
+          <React.Fragment key={item.header}>
+            <ListSubheader>{item.header}</ListSubheader>
+            {item.options.map((option, optionIndex) => {
+              return(<MenuItem key={`${itemIndex}-${optionIndex}`} onClick={()=>setOption(option)}>{option}</MenuItem>)
+            })}
+          </React.Fragment>)
+        })}
       </Menu>
     </div>
   );
