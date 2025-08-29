@@ -22,8 +22,6 @@ export default function Header(){
                 <div className='right-items'>
                     <IconButton><NotificationsNoneIcon fontSize="small" className='icons'/></IconButton>
                     <IconButton><PersonOutlineOutlinedIcon  fontSize="small" className='icons'/></IconButton>
-                    {/* <IconButton className="left-icons" sx={{ width: 40, height: 40, p: 0.5 }}><NotificationsNoneIcon  fontSize="small" className='icons'/></IconButton>
-                    <IconButton className="left-icons" sx={{ width: 40, height: 40, p: 0.5 }}><PersonOutlineOutlinedIcon fontSize="small" className='icons'/></IconButton> */}
                 </div>
             </div>
                 <Divider sx={{ bgcolor: 'primary.light' }}/>

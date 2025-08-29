@@ -3,10 +3,15 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import ListSubheader from '@mui/material/ListSubheader';
 import LibraryBooksOutlinedIcon from '@mui/icons-material/LibraryBooksOutlined';
-import InputAdornment from '@mui/material/InputAdornment';
+import Divider from '@mui/material/Divider';
 import { styled } from '@mui/material/styles';
+import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
+import {
+  ListSubheader,
+  Typography,
+  Box,
+} from '@mui/material';
 
 const StyledListHeader = styled(ListSubheader)({
   backgroundImage: 'var(--Paper-overlay)',
@@ -59,6 +64,17 @@ export default function BasicMenu() {
 
   }
 
+  const headerStyle ={
+    fontSize:'0.7rem',
+    fontWeight: 'bold',
+    color: 'black'
+  }
+
+    const menuItemStyle ={
+    fontSize:'0.6rem',
+    color: 'gray'
+  }
+
   return (
     <div>
       <Button
@@ -84,15 +100,19 @@ export default function BasicMenu() {
           height:'25rem'
         }}
       >
-        <StyledListHeader>
-          <div>Prompt Library<div>Pre-built commands for common tasks</div></div>
-        </StyledListHeader>
+        <ListSubheader disableSticky>
+        <Box>
+          <Typography sx={headerStyle}>Prompt Library</Typography>
+          <Typography sx={menuItemStyle}>Pre-built commands for common tasks</Typography>
+        </Box>
+        </ListSubheader >
+        <Divider sx={{paddingBottom:'0.5rem'}}></Divider>
         {menuItems.map((item, itemIndex)=>{
           return(
           <React.Fragment key={item.header}>
-            <ListSubheader>{item.header}</ListSubheader>
+            <div><ListSubheader  sx={headerStyle} ><LightbulbOutlinedIcon  sx={headerStyle} /> {item.header}</ListSubheader></div>
             {item.options.map((option, optionIndex) => {
-              return(<MenuItem key={`${itemIndex}-${optionIndex}`} onClick={()=>setOption(option)}>{option}</MenuItem>)
+              return(<MenuItem sx={menuItemStyle} key={`${itemIndex}-${optionIndex}`} onClick={()=>setOption(option)}>{option}</MenuItem>)
             })}
           </React.Fragment>)
         })}
