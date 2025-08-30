@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Tabs, Tab, Box, Typography, makeStyles } from '@mui/material';
+import { Tabs, Tab, Box, Typography, makeStyles, Divider } from '@mui/material';
 import { useState } from 'react';
 import { color } from 'framer-motion';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
@@ -48,6 +48,7 @@ export default function NavBar({tab1, tab2,tab3}: CustomTabProps) {
       <Tabs sx={{height:'3.5rem', marginTop:'-1rem'}} value={tab} onChange={handleChange}>
         {tabTitles.map((tab)=>{return(<Tab disableRipple sx={tabStyles} label={tab.title} icon={tab.icon} iconPosition="start"></Tab>)})}
       </Tabs>
+      <Divider sx={{ bgcolor: 'primary.light' }}/>
       {tab === 0 && <Typography>{tab1}</Typography>}
       {tab === 1 && <Typography>{tab2}</Typography>}
       {tab === 2 && <Typography>{tab3}</Typography>}
