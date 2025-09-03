@@ -48,7 +48,7 @@ export default function NavBar({tab1, tab2,tab3}: CustomTabProps) {
       <Tabs sx={{height:'3.5rem', marginTop:'-1rem'}} value={tab} onChange={handleChange}>
         {tabTitles.map((tab)=>{return(<Tab disableRipple sx={tabStyles} label={tab.title} icon={tab.icon} iconPosition="start"></Tab>)})}
       </Tabs>
-      <Divider sx={{ bgcolor: 'primary.light' }}/>
+      <Divider sx={{ bgcolor: '#a1a1a1' }}/>
       {tab === 0 && <Typography>{tab1}</Typography>}
       {tab === 1 && <Typography>{tab2}</Typography>}
       {tab === 2 && <Typography>{tab3}</Typography>}

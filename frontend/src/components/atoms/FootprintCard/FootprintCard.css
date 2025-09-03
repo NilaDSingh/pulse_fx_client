@@ -6,7 +6,7 @@
 .container{
     display: flex;
     justify-content: space-between;
-    gap: 6%;
+    gap:3%;
 }
 
 .card-0-icon{

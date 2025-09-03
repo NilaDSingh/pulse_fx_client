@@ -5,6 +5,11 @@ import NavBar from '@/components/atoms/NavBar/NavBar';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import FootPrint from '../../atoms/FootprintCard/FootprintCard';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import RecommendedActionsCard from '../../molecules/RecommendedActionsCard/RecommendedActionsCard'
+import { recommendedData } from './MockData'
+import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 
 const buttonStyles={
     color: 'white',
@@ -44,6 +49,25 @@ export default function Home(){
         </div>
         <div className='footprint-card-container'>
             <FootPrint />
+        </div>
+        <div className="recommended-actions-container">
+            <Card 
+                sx={{ width: '60%', backgroundColor:"#000812", color:'white', border:1, borderColor:'#052032'}} title="AI Recommended Actions">
+                    <div className='recommendations-header'>
+                        <CardHeader
+                            avatar={<AutoAwesomeOutlinedIcon sx={{color:'#c27aff'}}></AutoAwesomeOutlinedIcon>}
+                            title="AI Recommended Actions"
+                        />
+                        <div className='ai-powered'><PsychologyIcon sx={{fontSize:"small"}}/> AI Powered</div>
+                    </div>
+                    <CardContent>
+                        {recommendedData.map((e:any) => {
+                            return(
+                            <RecommendedActionsCard data={e}
+                            />)
+                        })} 
+                    </CardContent>
+            </Card>
         </div>
     </div>
     )

@@ -1,0 +1,9 @@
+.card-specs{
+    display: flex;
+    margin-top: 1rem;
+}
+
+.card-header{
+    display: flex;
+
+}
