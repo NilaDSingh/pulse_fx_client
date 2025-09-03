@@ -7,6 +7,7 @@ import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import LinearProgress from '@mui/material/LinearProgress';
 import './FootprintCard.css'
+import { BorderColor } from '@mui/icons-material';
 export default function FootPrint(){
     const mockData = [
         {
@@ -34,11 +35,18 @@ export default function FootPrint(){
             desc:'Needs attention'
         }
     ]
+
+    const cardStyle = {
+        width:'25%',
+        backgroundColor:"#000812",
+        border:1,
+        borderColor:'#052032'
+    }
     return(
         <div className='container'>
             {mockData.map((data:any, index)=>{
                 return (
-                <Card variant="outlined" className={'card-'+index} sx={{ width: '25%', backgroundColor:"#000812", border:1, borderColor:'#052032'}}>
+                <Card variant="outlined" sx={cardStyle}>
                     <CardContent>
                         <div className='card-title-icon'>
                             <div>
