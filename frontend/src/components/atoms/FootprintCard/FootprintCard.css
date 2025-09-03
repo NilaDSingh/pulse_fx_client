@@ -1,0 +1,43 @@
+.card-title-icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 6%;
+}
+
+.card-0-icon{
+    color: #26a9f1;
+}
+
+.card-1-icon{
+    color: #fdc700;
+}
+
+.card-2-icon{
+    color: #05df72;
+}
+
+.card-3-icon{
+    color: #ff6467;
+}
+
+.data-1-desc {
+    color: #05df72;
+    font-size: x-small;
+}
+
+.data-2-desc {
+    color: grey;
+    font-size: x-small;
+
+}
+
+
+.data-3-desc {
+    color: #ff6467;
+    font-size: x-small;
+}
