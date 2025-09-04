@@ -27,3 +27,17 @@
     padding-top: 0.2rem;
     margin-left: 1rem;
 }
+
+.category{
+    border-radius: 5px;
+    border:1px solid #052032;
+    font-size: x-small;
+    width: fit-content;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+}

@@ -40,7 +40,8 @@ export default function FootPrint(){
         width:'25%',
         backgroundColor:"#000812",
         border:1,
-        borderColor:'#052032'
+        borderColor:'#052032',
+        borderRadius: '15px'
     }
     return(
         <div className='container'>
@@ -51,10 +52,10 @@ export default function FootPrint(){
                         <div className='card-title-icon'>
                             <div>
                             <Typography variant="body2" color="gray" component="div">
-                            {data.cardTitle}
+                                {data.cardTitle}
                             </Typography>
                             <Typography variant="h6" color="white">
-                            {data.value}
+                                {data.value}
                             </Typography>
                             </div>
                             <div className={'card-'+index+'-icon'}>{data.icon}</div>

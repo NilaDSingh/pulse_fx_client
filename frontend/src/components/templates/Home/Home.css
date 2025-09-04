@@ -11,6 +11,7 @@
 .recommendations-header {
     display: flex;
     justify-content: space-between;
+    place-items: center;
 }
 
 .ai-powered {

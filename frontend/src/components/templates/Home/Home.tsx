@@ -52,7 +52,7 @@ export default function Home(){
         </div>
         <div className="recommended-actions-container">
             <Card 
-                sx={{ width: '60%', backgroundColor:"#000812", color:'white', border:1, borderColor:'#052032'}} title="AI Recommended Actions">
+                sx={{ width: '60%', backgroundColor:"#000812", color:'white', border:1, borderColor:'#052032', borderRadius: '15px'}} title="AI Recommended Actions">
                     <div className='recommendations-header'>
                         <CardHeader
                             avatar={<AutoAwesomeOutlinedIcon sx={{color:'#c27aff'}}></AutoAwesomeOutlinedIcon>}

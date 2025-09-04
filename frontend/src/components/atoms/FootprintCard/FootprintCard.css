@@ -11,18 +11,26 @@
 
 .card-0-icon{
     color: #26a9f1;
+    display: grid;
+    place-items: center;
 }
 
 .card-1-icon{
     color: #fdc700;
+    display: grid;
+    place-items: center;
 }
 
 .card-2-icon{
     color: #05df72;
+    display: grid;
+    place-items: center;
 }
 
 .card-3-icon{
     color: #ff6467;
+    display: grid;
+    place-items: center;
 }
 
 .data-1-desc {
