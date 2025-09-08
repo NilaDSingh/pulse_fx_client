@@ -1,0 +1,15 @@
+
+.channel-subcard{
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+.channel-subtitle{
+    color:white;
+    font-size: x-small;
+    margin-top: 1rem;
+}
+.connected-subtitle{
+    font-size: small;
+    margin-top: 0.5rem;
+}

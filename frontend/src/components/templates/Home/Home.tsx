@@ -1,15 +1,19 @@
 import './Home.css'
-import { Card, CardHeader } from '@mui/material';
-import Button from '@mui/material/Button';
-import NavBar from '@/components/atoms/NavBar/NavBar';
+import { 
+    Card, 
+    CardHeader, 
+    Button,
+    CardContent
+} from '@mui/material';
+
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import FootPrint from '../../atoms/FootprintCard/FootprintCard';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
 import RecommendedActionsCard from '../../molecules/RecommendedActionsCard/RecommendedActionsCard'
-import { recommendedData } from './MockData'
+import { recommendedData, connectedChannels } from './MockData'
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
+import ChannelHealth from '../../molecules/ChannelHealth/ChannelHealth';
+import QuickWinsFooter from '../../molecules/QuickWinsFooter/QuickWinsFooter';
 
 const buttonStyles={
     color: 'white',
@@ -30,33 +34,23 @@ const cardStyles={
 }
 
 export default function Home(){
+    console.log('home',connectedChannels)
     return(
     <div className='home-container'>
         <div className='footprint-overview'>
-            <div>
-            <Card>
-                <CardHeader
-                    sx={cardStyles}
-                    title="Digital Footprint Overview"
-                    subheader="Your AI-powered Digital Presence Intelligence Dashboard"
-                />
-            </Card>
-         </div>
-         <div>
-            <Button sx={buttonStyles} variant='outlined' startIcon={<PsychologyIcon />}>AI Modeling Lab</Button>
-            <Button sx={buttonStyles} variant='outlined' startIcon={<RocketLaunchIcon/>}>Quick Actions</Button>
-         </div>
         </div>
         <div className='footprint-card-container'>
             <FootPrint />
         </div>
+        <div className='actions-channel-container'>
         <div className="recommended-actions-container">
             <Card 
-                sx={{ width: '60%', backgroundColor:"#000812", color:'white', border:1, borderColor:'#052032', borderRadius: '15px'}} title="AI Recommended Actions">
+                sx={{backgroundColor:"#000812", color:'white', border:1, borderColor:'#052032', borderRadius: '15px', height:'30rem'}} title="AI Recommended Actions">
                     <div className='recommendations-header'>
                         <CardHeader
                             avatar={<AutoAwesomeOutlinedIcon sx={{color:'#c27aff'}}></AutoAwesomeOutlinedIcon>}
-                            title="AI Recommended Actions"
+                            title="Quick Wins Available"
+                            subheader='AI found opportunities to boost your score'
                         />
                         <div className='ai-powered'><PsychologyIcon sx={{fontSize:"small"}}/> AI Powered</div>
                     </div>
@@ -67,7 +61,12 @@ export default function Home(){
                             />)
                         })} 
                     </CardContent>
+                <div><QuickWinsFooter></QuickWinsFooter></div>
             </Card>
+        </div>
+        <div className='connected-channels'>
+            <ChannelHealth connectedChannels={connectedChannels}></ChannelHealth>
+        </div>
         </div>
     </div>
     )

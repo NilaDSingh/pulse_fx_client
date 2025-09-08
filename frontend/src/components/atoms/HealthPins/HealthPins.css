@@ -1,0 +1,28 @@
+.modal-header{
+    display: flex;
+    gap:1rem;
+}
+
+.ex-rating{
+    font-size: x-small;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5%;
+    font-weight: bold;
+    width:fit-content
+
+}
+
+.close-button{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.channel-button{
+  text-align: start;
+}
+
+.rating-sub{
+    font-size: x-small;
+    color: #a1a1a1;
+}

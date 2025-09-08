@@ -7,7 +7,7 @@ export const recommendedData = [
         icon:<WarningAmberIcon sx={{color:'#ff6467', fontSize:'small'}}/>,
         title:'Claim unclaimed Yelp listing',
         desc:'Your Yelp listing is unclaimed with 4 unresponded reviews',
-        pts:'+15-20 pts',
+        pts: 20,
         time:'30 min',
         impact:'High Impact',
         category:'Critical Fix'
@@ -16,7 +16,7 @@ export const recommendedData = [
         icon:<BoltOutlinedIcon sx={{color:'#fdc700', fontSize:'medium'}}/>,
         title:'Get Instagram Verification',
         desc:'Verification badge will boose credibility',
-        pts:'+15-20 pts',
+        pts:10,
         time:'30 min',
         impact:'Medium Impact',
         category:'Growth Opportunity'
@@ -26,9 +26,29 @@ export const recommendedData = [
         icon:<TrackChangesOutlinedIcon sx={{color:'#50a2ff', fontSize:'small'}}/>,
         title:'Add more Google Business photos',
         desc:'Businesses with more photos get 42% moe requests',
-        pts:'+15-20 pts',
+        pts: 6,
         time:'30 min',
         impact:'Medium Impact',
         category:'Optimization'
     }
 ]
+
+export const connectedChannels = 
+    [
+    
+            {
+                name:'Google Business Profile',
+                rating:'91/100'
+            },
+    
+            {
+                name:'Company Website',
+                rating:'88/100'
+            },
+    
+            {
+                name: 'Yelp',
+                rating: '45/100'
+            }
+        ]
+

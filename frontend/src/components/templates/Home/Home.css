@@ -23,3 +23,22 @@
     border-radius: 10px;
     display: flex;
 }
+.actions-channel-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    gap: 1.5rem;
+}
+
+.recommended-actions-container{
+    width: 90%;
+}
+
+.connected-channels{
+}
+
+.home-container{
+    margin-top: 2rem;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}

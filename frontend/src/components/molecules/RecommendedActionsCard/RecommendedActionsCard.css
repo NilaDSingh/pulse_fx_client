@@ -1,15 +1,19 @@
-.card-specs{
+.first-line{
     display: flex;
-    margin-top: 1rem;
+    gap: 1rem;
     place-items: center;
 }
 
-.card-header{
-    display: flex;
-
+.title{
+    color: white;
+    font-size: small;
+    margin-bottom: -1rem;
+    margin-top: -0.6rem;
 }
 
-.first-line-container {
-    display: flex;
-    justify-content: space-between;
+.title-hover{
+    color: #26a9f1;
+    font-size: small;
+    margin-bottom: -1rem;
+    margin-top: -0.6rem;
 }

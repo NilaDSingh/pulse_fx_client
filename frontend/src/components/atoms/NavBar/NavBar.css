@@ -1,0 +1,31 @@
+.unselected{
+    background-color: #000911;
+    color: #a1a1a1;
+    font-weight: bold;
+    font-size: 0.7rem;
+    display: flex;
+    place-items: center;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    height: 2rem;
+    border: none;
+}
+
+.unselected:hover{
+    color: white;
+    background-color: #01101c;
+}
+
+.selected{
+    font-size: 0.7rem;
+    font-weight: bold;
+    display: flex;
+    place-items: center;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    height: 2rem;
+    background-color: #041928;
+    color: #26a9f1;
+    border: 1px solid  #26a9f1;
+    filter: drop-shadow(0px 2px 6px #26a9f1);
+}

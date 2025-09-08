@@ -1,43 +1,47 @@
 .high-impact{
-    background-color: #4e1116;
-    font-size: x-small;
+    background-color: #190c14;
+    font-size: xx-small;
     width: fit-content;
     display: flex;
-    color: white;
     font-weight: bold;
+    color:  #ff6467;
     justify-content: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.2rem;    border-radius: 5px;
-    margin-left: 1rem;
+    border: 1px solid  #46121b;
+    border-radius: 7px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 
 .normal-impact{
-    background-color:#031826;
-    border-radius: 5px;
-    border:1px solid #052032;
-    font-size: x-small;
+    background-color: #181a0f;
+    font-size: xx-small;
     width: fit-content;
     display: flex;
-    color: white;
     font-weight: bold;
+    color:  #f8bf00;
     justify-content: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    border: 1px solid  #43380c;
+    border-radius: 7px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
     padding-top: 0.2rem;
-    margin-left: 1rem;
+    padding-bottom: 0.2rem;
 }
 
 .category{
-    border-radius: 5px;
-    border:1px solid #052032;
-    font-size: x-small;
+    background-color: #04152a;
+    font-size: xx-small;
     width: fit-content;
     display: flex;
-    color: white;
     font-weight: bold;
+    color:  #4194ff;
     justify-content: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    border: 1px solid  #0b274f;
+    border-radius: 7px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
     padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }

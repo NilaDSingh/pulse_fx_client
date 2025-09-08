@@ -1,12 +1,19 @@
 .pulse-fx {
     color: #26a9f1;
-    font-size: large;
+    font-size: medium;
     height: 5px;
-    margin-top: 0%;
+    margin-top: 2%;
     display: flex;
+    font-weight:500;
+    margin-bottom: 1.3rem;
 }
 
 .description {
-    font-size: small;
+    font-size: x-small;
     color: #a1a1a1;
+}
+
+.logo-container{
+  display: flex;   
+  place-items: center;
 }

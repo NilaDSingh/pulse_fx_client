@@ -5,53 +5,79 @@ import { color } from 'framer-motion';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
-
+import Button from '@mui/material/Button';
+import { BorderAllRounded } from '@mui/icons-material';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import './NavBar.css'
 type CustomTabProps = {
   tab1?:JSX.Element;
   tab2?:JSX.Element;
   tab3?:JSX.Element;
 };
 
-export default function NavBar({tab1, tab2,tab3}: CustomTabProps) {
-  const [tab, setTab] = React.useState(0);
-  let tabTitles = [
-    {
-      icon: <HomeOutlinedIcon fontSize='small'/>,
-      title:"Home"
-    }, 
-    {
-      icon: <SettingsOutlinedIcon fontSize='small'/>, 
-      title:"Automations"
-    },
-    {
-      icon: <WatchLaterOutlinedIcon fontSize='small'/>,
-      title:"Activity"
-    }
-  ]
 
-  const tabStyles = {
+const tabStyles1 = {
     fontSize:'0.7rem',
     fontWeight:'bold',
     textTransform: 'none',
     minWidth: 30,
     color: "#a1a1a1",
+    border:'5px, solid yellow',
   }
 
+  const tabStyles2={
+    fontSize:'0.7rem',
+    fontWeight:'bold',
+    textTransform: 'none',
+    minWidth: 30,
+    color: "#a1a1a1",
+    border:'1px, solid purple',
+  }
+
+  const buttonStyles={
+    color: 'white',
+    textTransform: 'none',
+    backgroundColor:'#26a9f1',
+    fontSize:'0.7rem',
+    marginRight:'0.5rem'
+}
+
+export default function NavBar({tab1, tab2,tab3}: CustomTabProps) {
+  const [currentTab, setCurrentTab] = React.useState(0);
+  const [prevTabName, setPrevTabName] = React.useState('Home');
+
+  const [tabStyle, setTabStyle] =React.useState(tabStyles1);
+  let tabTitles = [
+    {
+      icon: <HomeOutlinedIcon sx={{marginRight:'0.5rem', fontSize:'medium'}}/>,
+      title:"Dashboard"
+    }, 
+    {
+      icon: <SettingsOutlinedIcon sx={{marginRight:'0.5rem', fontSize:'medium', color:currentTab==1?'#bb7cfe':''}}/>, 
+      title:"Automations"
+    },
+    {
+      icon: <WatchLaterOutlinedIcon sx={{marginRight:'0.5rem', fontSize:'medium', color:currentTab==2?'#05df72':''}}/>,
+      title:"Activity"
+    }
+  ]
+
   // uses index of tab to select
-  const handleChange = (event:any, selected:number) => {
-    console.log(selected)
-    setTab(selected)
+  const setTab = (index:number, id:string) => {
+    setCurrentTab(index)    
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
-      <Tabs sx={{height:'3.5rem', marginTop:'-1rem'}} value={tab} onChange={handleChange}>
-        {tabTitles.map((tab)=>{return(<Tab disableRipple sx={tabStyles} label={tab.title} icon={tab.icon} iconPosition="start"></Tab>)})}
-      </Tabs>
-      <Divider sx={{ bgcolor: '#a1a1a1' }}/>
-      {tab === 0 && <Typography>{tab1}</Typography>}
-      {tab === 1 && <Typography>{tab2}</Typography>}
-      {tab === 2 && <Typography>{tab3}</Typography>}
+    <Box sx={{ width: '100%'}}>
+            <Divider sx={{ bgcolor: '#052032' }}/>
+
+      <ButtonGroup  sx={{height:'3rem', placeItems:'center'}}>
+        {tabTitles.map((tab, index)=>{return(<button id={tab.title} className={currentTab==index?'selected':'unselected'} onClick={() => setTab(index, tab.title)}>{tab.icon}{tab.title}</button>)})}
+      </ButtonGroup>
+      <Divider sx={{ bgcolor: '#052032' }}/>
+      {currentTab === 0 && <Typography>{tab1}</Typography>}
+      {currentTab === 1 && <Typography>{tab2}</Typography>}
+      {currentTab === 2 && <Typography>{tab3}</Typography>} 
     </Box>
   )
 }

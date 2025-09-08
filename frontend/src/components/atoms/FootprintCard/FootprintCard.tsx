@@ -7,7 +7,9 @@ import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import LinearProgress from '@mui/material/LinearProgress';
 import './FootprintCard.css'
-import { BorderColor } from '@mui/icons-material';
+
+// Homepage Footprint Card
+
 export default function FootPrint(){
     const mockData = [
         {
@@ -51,7 +53,7 @@ export default function FootPrint(){
                     <CardContent>
                         <div className='card-title-icon'>
                             <div>
-                            <Typography variant="body2" color="gray" component="div">
+                            <Typography variant="body2" color="#a1a1a1" component="div">
                                 {data.cardTitle}
                             </Typography>
                             <Typography variant="h6" color="white">

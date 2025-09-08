@@ -1,63 +1,76 @@
+import { useState } from 'react';
+import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import ImpactCard from '../../atoms/ImpactCard/ImpactCard';
-import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';import './RecommendedActionsCard.css'
-import TrackChangesIcon from '@mui/icons-material/TrackChanges';
 import { Button } from '@mui/material';
 import EastIcon from '@mui/icons-material/East';
+import './RecommendedActionsCard.css'
+
+
 export default function RecommendedActionsCard(data: any){
     // must change warning icon with appropriate logic
+    const [button, setShowButton] = React.useState(false)
+    const [titleHover, setTitleHover] = React.useState('title')
 
     const cardStyle = {
         border:1,
         borderColor: '#052032',
         backgroundColor:'#000812',
-        borderRadius: '15px'
+        borderRadius: '15px',
+        '&:hover': {
+            border: "1px solid #0b3855"
+        }
 
     }
-
     const cardSpecStyle = {
         fontSize:'x-small', 
         color: "#a1a1a1", 
         marginRight: '1rem'
     }
-
-    const titleStyle = {
-        color:'white', 
-        fontSize:'medium',
-        marginLeft:'6px'
-    }
-
     const subtitleStyle = {
-        fontSize:'small', 
+        fontSize:'0.7rem', 
         color: "#a1a1a1",
         marginTop: '0.5rem'
     }
-    
+    const buttonStyle = {
+        textTransform:'none',
+        color: 'white',
+        fontWeight: 'bold',
+        fontSize:'small'
+    }
+    const buttonIconStyle={
+        
+    }
+
+    const showButton = (val:boolean) =>{
+        setShowButton(val)
+        if(val==true){
+            setTitleHover('title-hover')
+        }
+        else{
+            setTitleHover('title')
+        }
+    }
+
     return(
     <div>
-        <Card sx={cardStyle}>
-            <CardContent>
-                <div className='first-line-container'>
-                <div className="card-header">
-                    <Typography>{data.data.icon}</Typography>
-                    <Typography sx={titleStyle}> {data.data.title}</Typography>
-                    <ImpactCard impact={data.data.impact}></ImpactCard>
+        <Card  
+        sx={cardStyle}
+        onMouseOver={() => showButton(true)}
+        onMouseOut={() => showButton(false)}
+      >
+            <CardContent sx={{display:'flex', justifyContent:'space-between', placeItems:'center'}}>
+                <div>
+                    <div className='first-line'>
+                    <ImpactCard impact={data.data.pts}></ImpactCard>
+                    <Typography sx={cardSpecStyle}>{data.data.time}</Typography>
+                    </div>
+                    <div className={titleHover}><h4>{data.data.title}</h4></div>
+                    <Typography sx={subtitleStyle}>{data.data.desc}</Typography>
                 </div>
-                <Button>
-                    <EastIcon sx={{fontSize:"small",color:'white'}}/>
-                </Button>
-                </div>
-                <Typography sx={subtitleStyle}>{data.data.desc}</Typography>
-                <div className="card-specs">
-                    <Typography sx={cardSpecStyle}><TrendingUpIcon sx={{fontSize:'x-small'}}/>{data.data.pts}</Typography>
-                    <Typography sx={cardSpecStyle}><CalendarTodayIcon sx={{fontSize:'x-small'}}/> {data.data.time}</Typography>
-                    <ImpactCard impact={data.data.category}></ImpactCard>
-                </div>
-
+                <div>{button && <Button sx={buttonStyle} endIcon={<EastIcon sx={{fontSize:'x-small'}}></EastIcon>}>Fix this</Button>}</div>
             </CardContent>
         </Card>
     </div>
