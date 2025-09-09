@@ -14,15 +14,6 @@
     place-items: center;
 }
 
-.ai-powered {
-    font-size: x-small;
-    font-weight: bold;
-    border: 1px solid #052032;
-    height: fit-content;
-    padding: 0.3rem;
-    border-radius: 10px;
-    display: flex;
-}
 .actions-channel-container{
     display: flex;
     justify-content: space-between;
@@ -31,7 +22,7 @@
 }
 
 .recommended-actions-container{
-    width: 90%;
+    width: 95rem;
 }
 
 .connected-channels{
@@ -41,4 +32,10 @@
     margin-top: 2rem;
     margin-right: 5rem;
     margin-left: 5rem;
+}
+
+.quick-wins-footer{
+    display: flex;
+    justify-content: center;
+
 }

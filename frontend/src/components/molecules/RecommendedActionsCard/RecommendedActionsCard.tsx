@@ -21,13 +21,13 @@ export default function RecommendedActionsCard(data: any){
         borderRadius: '15px',
         '&:hover': {
             border: "1px solid #0b3855"
-        }
+        },
+        marginTop:'0.5rem'
 
     }
     const cardSpecStyle = {
         fontSize:'x-small', 
         color: "#a1a1a1", 
-        marginRight: '1rem'
     }
     const subtitleStyle = {
         fontSize:'0.7rem', 

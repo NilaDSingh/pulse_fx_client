@@ -1,0 +1,36 @@
+/* .title{
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.subtitle{
+    color:  #a1a1a1;
+    font-size: small;
+    margin-top: 1rem;
+}
+
+.container{
+    
+} */
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.quick-footer-title{
+    color: white;
+    font-size: smaller;
+    font-weight: bold;
+}
+
+.quick-footer-subtitle{
+    color:  #a1a1a1;
+    font-size: small;
+}
+
+.quick-footer-container{
+    display: flex;
+    justify-content: space-between;
+}

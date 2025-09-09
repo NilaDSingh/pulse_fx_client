@@ -17,8 +17,9 @@ export default function ChannelHealth(data:any){
         backgroundColor:'#00060e',
         color:'white',
         borderRadius:'15px',
-        height:'30rem'
+        height:'35rem'
     }
+    
     console.log('Channel health')
 
     return(
