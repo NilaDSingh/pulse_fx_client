@@ -2,6 +2,11 @@
     color: white;
 }
 
+.subheader{
+    color: #a1a1a1;
+    font-size: smaller;
+}
+
 .footprint-overview{
     display: flex;
     align-items: center;

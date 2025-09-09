@@ -15,8 +15,7 @@ export default function RecommendedActionsCard(data: any){
     const [titleHover, setTitleHover] = React.useState('title')
 
     const cardStyle = {
-        border:1,
-        borderColor: '#052032',
+        border:'1px solid #052032',
         backgroundColor:'#000812',
         borderRadius: '15px',
         '&:hover': {

@@ -31,7 +31,7 @@ export default function Home(){
                         <CardHeader
                             avatar={<AutoAwesomeOutlinedIcon sx={{color:'#c27aff'}}></AutoAwesomeOutlinedIcon>}
                             title="Quick Wins Available"
-                            subheader='AI found opportunities to boost your score'
+                            subheader={<div className='subheader'>AI found opportunities to boost your score</div>}
                         />
                     </div>
                     <CardContent>
@@ -43,7 +43,8 @@ export default function Home(){
                     </CardContent>
                     
                     <CardContent>
-                        <QuickWinsFooter></QuickWinsFooter>
+                            <QuickWinsFooter></QuickWinsFooter>
+                        
                     </CardContent>
 
             </Card>
