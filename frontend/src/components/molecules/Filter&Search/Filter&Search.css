@@ -1,0 +1,8 @@
+.form{
+    display: flex;
+    justify-items: space-between;
+}
+
+.search-box{
+    width: 2rem;
+}

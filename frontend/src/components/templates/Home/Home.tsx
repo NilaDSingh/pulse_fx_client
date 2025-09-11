@@ -8,10 +8,12 @@ import {
 
 import FootPrint from '../../atoms/FootprintCard/FootprintCard';
 import RecommendedActionsCard from '../../molecules/RecommendedActionsCard/RecommendedActionsCard'
-import { recommendedData, connectedChannels } from './MockData'
+import { recommendedData, connectedChannels } from '../../../services/MockData'
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
 import ChannelHealth from '../../molecules/ChannelHealth/ChannelHealth';
 import QuickWinsFooter from '../../molecules/QuickWinsFooter/QuickWinsFooter';
+import HomeFooter from '../../molecules/HomeFooter/HomeFooter';
+
 import './Home.css'
 
 export default function Home(){
@@ -52,7 +54,9 @@ export default function Home(){
         <div className='connected-channels'>
             <ChannelHealth connectedChannels={connectedChannels}></ChannelHealth>
         </div>
+        
         </div>
+       <HomeFooter/>
     </div>
     )
 }

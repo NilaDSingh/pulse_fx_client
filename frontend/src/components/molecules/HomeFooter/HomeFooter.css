@@ -1,0 +1,22 @@
+.quick-footer-title{
+    color: white;
+    font-size: smaller;
+    font-weight: bold;
+
+}
+
+.quick-footer-subtitle{
+    color:  #a1a1a1;
+    font-size: small;
+}
+
+.quick-footer-container{
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.buttons{
+    display: flex;
+    gap:1rem;
+}

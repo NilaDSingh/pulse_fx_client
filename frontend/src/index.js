@@ -4,13 +4,12 @@ import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/molecules/Header/Header'
 import Home from './components/templates/Home/Home'
-import Activity from './components/templates/Activity/Activity'
 import Automations from './components/templates/Automations/Automations'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div className='page'>
-      <Header tab1={<Home />} tab2={<Automations />} tab3={<Activity />}></Header>
+      <Header tab1={<Home />} tab2={<Automations />}></Header>
     </div>
   </React.StrictMode>
 );

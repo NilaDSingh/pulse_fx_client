@@ -8,11 +8,11 @@ import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';
 import Button from '@mui/material/Button';
 import { BorderAllRounded } from '@mui/icons-material';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import Activity from '../../templates/Activity/Activity';
 import './NavBar.css'
 type CustomTabProps = {
   tab1?:JSX.Element;
   tab2?:JSX.Element;
-  tab3?:JSX.Element;
 };
 
 
@@ -42,7 +42,7 @@ const tabStyles1 = {
     marginRight:'0.5rem'
 }
 
-export default function NavBar({tab1, tab2,tab3}: CustomTabProps) {
+export default function NavBar({tab1, tab2}: CustomTabProps) {
   const [currentTab, setCurrentTab] = React.useState(0);
   const [prevTabName, setPrevTabName] = React.useState('Home');
 
@@ -61,7 +61,6 @@ export default function NavBar({tab1, tab2,tab3}: CustomTabProps) {
       title:"Activity"
     }
   ]
-
   // uses index of tab to select
   const setTab = (index:number, id:string) => {
     setCurrentTab(index)    
@@ -77,7 +76,7 @@ export default function NavBar({tab1, tab2,tab3}: CustomTabProps) {
       <Divider sx={{ bgcolor: '#052032' }}/>
       {currentTab === 0 && <Typography>{tab1}</Typography>}
       {currentTab === 1 && <Typography>{tab2}</Typography>}
-      {currentTab === 2 && <Typography>{tab3}</Typography>} 
+      {currentTab === 2 && <div className='tab3'><Activity/></div>} 
     </Box>
   )
 }

@@ -1,4 +1,15 @@
-.activity-header{
+.activity-container{
    color: #a1a1a1;
    font-size: smaller;
+   background-image: radial-gradient(circle at  left,rgba(3, 13, 21, 1) 0%, rgba(48, 51, 55, 1) 100%);
+   position: absolute;
+   width: 100%;
+   height: fit-content;
+}
+
+.filter-search{
+   width: 85%;
+   margin:auto;
+   margin-top: 2rem;
+   justify-content: center;
 }

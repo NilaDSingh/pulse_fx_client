@@ -37,10 +37,16 @@
     margin-top: 2rem;
     margin-right: 5rem;
     margin-left: 5rem;
+    /* background: linear-gradient(90deg,rgba(3, 13, 21, 1) 0%, rgba(48, 51, 55, 1) 100%); */
+
 }
 
 .quick-wins-footer{
     display: flex;
     justify-content: center;
 
+}
+
+.home-footer{
+    margin-top: 2rem;
 }

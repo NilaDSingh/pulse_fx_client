@@ -12,7 +12,6 @@ export default function SearchBar() {
                 className="search-bar" 
                 id="search-bar" 
                 fullWidth
-                placeholder="Type a command: watch, fix, grow, benchmark..." 
                 variant="outlined" 
                 size='small'
                 sx={{ input: { color: "white"}}} 
