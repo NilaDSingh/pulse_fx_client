@@ -1,6 +1,7 @@
 export default function Automations(){
     return(
-        <div>
+        <div className='automations-container'>
+            <div>hye</div>
         </div>
     )
 }

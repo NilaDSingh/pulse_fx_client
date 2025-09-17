@@ -9,12 +9,11 @@ import Button from '@mui/material/Button';
 import { BorderAllRounded } from '@mui/icons-material';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Activity from '../../templates/Activity/Activity';
-import './NavBar.css'
-type CustomTabProps = {
-  tab1?:JSX.Element;
-  tab2?:JSX.Element;
-};
+import Home from '../../templates/Home/Home';
+import Automations from '../../templates/Automations/Automations';
 
+
+import './NavBar.css'
 
 const tabStyles1 = {
     fontSize:'0.7rem',
@@ -42,7 +41,7 @@ const tabStyles1 = {
     marginRight:'0.5rem'
 }
 
-export default function NavBar({tab1, tab2}: CustomTabProps) {
+export default function NavBar() {
   const [currentTab, setCurrentTab] = React.useState(0);
   const [prevTabName, setPrevTabName] = React.useState('Home');
 
@@ -74,8 +73,8 @@ export default function NavBar({tab1, tab2}: CustomTabProps) {
         {tabTitles.map((tab, index)=>{return(<button id={tab.title} className={currentTab==index?'selected':'unselected'} onClick={() => setTab(index, tab.title)}>{tab.icon}{tab.title}</button>)})}
       </ButtonGroup>
       <Divider sx={{ bgcolor: '#052032' }}/>
-      {currentTab === 0 && <Typography>{tab1}</Typography>}
-      {currentTab === 1 && <Typography>{tab2}</Typography>}
+      {currentTab === 0 && <Typography><Home/></Typography>}
+      {currentTab === 1 && <Typography><Automations/></Typography>}
       {currentTab === 2 && <div className='tab3'><Activity/></div>} 
     </Box>
   )

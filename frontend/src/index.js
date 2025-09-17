@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div className='page'>
-      <Header tab1={<Home />} tab2={<Automations />}></Header>
+      <Header></Header>
     </div>
   </React.StrictMode>
 );

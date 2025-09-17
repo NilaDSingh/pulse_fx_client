@@ -26,7 +26,7 @@ export default function Header({tab1, tab2, tab3}: HeaderProps){
                     <IconButton><PersonOutlineOutlinedIcon  fontSize="small" className='icons'/></IconButton>
                 </div>
             </div>
-                <NavBar tab1={tab1} tab2={tab2}></NavBar>
+                <NavBar></NavBar>
         </div>
     )
 }

@@ -129,3 +129,55 @@ export const assetMenu=[
     'Analytics Dashboard',
     'Brand Monitoring'
 ]
+
+// data for Automations tab
+const generalInfo={
+        'Active Automations':4,
+        'Pending Approval':'4',
+        'Urgent Items':1,
+        'Active Agents':4,
+        'Success Rate':'94%',
+        'Actions Today':847
+}
+const automationList=[
+    {
+        title:'Auto-respond to Low Risk Reviews',
+        agent:'Liaison',
+        next_run:'On trigger',
+        success_rate:'94%',
+        tags:['reviews', 'response','engagement'],
+        requires_approval:true,
+        trigger:'Positive review (4-5 stars) recieved',
+        priority:'medium',
+        status:'active',
+        executions: 89, 
+        ave_response:2.3
+    },
+    {
+        title:'Content Performance Optimization',
+        agent:'Agent',
+        next_run:'Paused',
+        success_rate:'87%',
+        tags:['content', 'optimization','analytics'],
+        requires_approval:true,
+        trigger:'Engagement rate drops below 2.5%',
+        priority:'low',
+        status:'paused',
+        executions:'23',
+        avg_response:2.3
+    }
+]
+
+const executionlog=[
+    {
+        task:'Review response posted',
+        triggered:'2 hours ago',
+        time_taken:1.3
+    },
+    {
+        task:'Profile updated',
+        triggered:'5 hours ago',
+        time_taken:2.1
+    }
+]
+
