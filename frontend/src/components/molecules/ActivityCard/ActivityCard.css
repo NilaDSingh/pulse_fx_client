@@ -69,8 +69,8 @@
     padding-bottom: 0.2rem;
     font-size: x-small;
     font-weight: bold;
-    border:1px solid #052032,
-
+    border:1px solid #052032;
+    margin-left:0.5rem;
 }
 
 .tag-rollback{
@@ -85,4 +85,23 @@
 .body-container{
     display: flex;
     justify-content: space-between;
+}
+
+.id-version{
+    color: #a1a1a1;
+    font-size: x-small;
+    display: flex;
+    gap:0.5rem;
+}
+
+.card-footer{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.footer-buttons{
+    gap:1rem;
+    display: flex;
 }

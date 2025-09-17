@@ -57,6 +57,8 @@ export const connectedChannels =
 // data for Activity tab
 export const activityData = [
     {
+        id:0,
+        version:1.0,
         agent:'Curator',
         asset:'website',
         title:'Updated meta descriptions',
@@ -73,6 +75,8 @@ export const activityData = [
         date:'1/15/2024'
     },
     {
+        id:1,
+        version:1.1,
         agent:'Liaison',
         asset:'LinkedIn',
         title:'Published case study',
@@ -89,6 +93,8 @@ export const activityData = [
         date:'1/15/2024'
     },
     {
+        id:2,
+        version:1.2,
         agent:'Publisher',
         asset:'Google Business Profile',
         title:'Updated business hours',

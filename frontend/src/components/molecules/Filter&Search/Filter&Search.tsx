@@ -14,16 +14,24 @@ import InputAdornment from '@mui/material/InputAdornment';
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined';
 import { agentMenu, assetMenu } from '../../../services/MockData';
 
-export default function FilterSearch(menu:any, id:string, ){
+export default function FilterSearch(props:any){
     const [agent, setAgent] = React.useState('All Agents');
     const [asset, setAsset] = React.useState('All Assets');
+    const [textfield, setTextField] = React.useState('');
 
-    const selectAgent = (event:any) => {
-    setAgent(event.target.value);
+    const handleAgentChange = (event:any) => {
+        setAgent(event.target.value)
+        props.filterAgent(event.target.value);
   };
 
-      const selectAsset = (event:any) => {
-    setAsset(event.target.value);
+    const handleAssetChange = (event:any) => {
+        setAsset(event.target.value)
+        props.filterAsset(event.target.value);
+  };
+  
+    const handleTextfieldChange = (event:any) => {
+        setAsset(event.target.value)
+        props.filterAsset(event.target.value);
   };
 
   const textStyle={
@@ -69,10 +77,13 @@ export default function FilterSearch(menu:any, id:string, ){
                     <Grid size={3}>
                     <div>
                         <TextField 
+                        placeholder='Search Changes...'
+                        value={textfield}
+                        onChange={handleTextfieldChange}
                         sx={textStyle}
                         slotProps={{
                             input:(
-                                {startAdornment: <InputAdornment position="start"><SearchOutlinedIcon sx={{color:'white', fontSize:'medium'}}/></InputAdornment>}
+                                {startAdornment: <InputAdornment position="start"><SearchOutlinedIcon sx={{color:'#a1a1a1', fontSize:'medium'}}/></InputAdornment>}
                             )
                         }}
                         >
@@ -83,7 +94,7 @@ export default function FilterSearch(menu:any, id:string, ){
                     <Grid size={3}>
                     <div><Select
                             value={agent}
-                             onChange={selectAgent}
+                             onChange={handleAgentChange}
                              sx={dropdownStyle}
                          >
                              {agentMenu.map((item)=>{
@@ -96,7 +107,7 @@ export default function FilterSearch(menu:any, id:string, ){
                     <Grid size={3}>
                     <div><Select
                              value={asset}
-                             onChange={selectAsset}
+                             onChange={handleAssetChange}
                              sx={dropdownStyle}
                          >
                             {assetMenu.map((item)=>{
