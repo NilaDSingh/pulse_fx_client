@@ -57,17 +57,20 @@ export const connectedChannels =
 // data for Activity tab
 export const activityData = [
     {
-        agent:'curator',
+        agent:'Curator',
         asset:'website',
         title:'Updated meta descriptions',
         description:'optimized meta description for 3 product pages to improve SEO performance',
         reason:'Analysis showed meta descriptions were too short and missing target keywords',
-        ImpactMeasured:{
+        impact_data:{
+            chart_title:'Review Sentiment',
             before:'2.3%',
             after:'3.1%',
             change:'+34.8'
         },
-        tag:'automated'
+        tag:'automated',
+        time:'02:32 PM',
+        date:'1/15/2024'
     },
     {
         agent:'Liaison',
@@ -75,12 +78,31 @@ export const activityData = [
         title:'Published case study',
         description:'Posted "Airport CX Transformation case study with expert tone',
         reason:'Scheduled content publication as part of thought leadership and strategy',
-        ImpactMeasured:{
+        impact_data:{
+            chart_title:'Page Load Success',
             before:'2.1%',
             after:'2.4%',
             change:'+14.3'
         },
-        tag:'automated'
+        tag:'automated',
+        time:'02:32 PM',
+        date:'1/15/2024'
+    },
+    {
+        agent:'Publisher',
+        asset:'Google Business Profile',
+        title:'Updated business hours',
+        description:'Modified operating hours for holiday schedule',
+        reason:'Manual update requested for holiday hours adjustment',
+        impact_data:{
+            chart_title:'Click-Through Rate',
+            before:'2.1%',
+            after:'2.4%',
+            change:'+14.3'
+        },
+        tag:'manual',
+        time:'02:32 PM',
+        date:'1/15/2024'
     }
 ]
 

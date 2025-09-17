@@ -1,0 +1,29 @@
+.impact-container{
+    color:white;
+    border:'3px solid green';
+    display: grid;
+    gap:0.5rem;
+    margin-top: 0.5rem;
+}
+
+.impact-measured{
+    display: flex;
+    gap: 0.5rem;
+    font-size: medium;
+}
+
+.rate{
+    font-size:smaller;
+    color: #a1a1a1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.change{
+    display: flex;
+    justify-content: space-between;
+}
+
+.value{
+    color:white;
+}

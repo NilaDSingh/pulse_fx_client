@@ -1,0 +1,88 @@
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.date-time{
+    display: flex;
+    color: #a1a1a1;
+    gap:1rem;
+    place-items: center;
+    font-size: smaller;
+    margin-bottom:0.5rem;
+    
+}
+
+.automated-tag{
+    width: fit-content;
+    border-radius: 5px;
+    color:#8ec5e0;
+    background-color: #041941;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: x-small;
+    font-weight: bold;
+    border:1px solid #052032
+}
+
+.approved-tag{
+    width: fit-content;
+    border-radius: 5px;
+    color:#57eba8;
+    background-color: #00281b;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: x-small;
+    font-weight: bold;
+    border:1px solid #052032
+
+}
+
+.manual-tag{
+    width: fit-content;
+    border-radius: 5px;
+    color:#daa2cd;
+    background-color: #1e0a40;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: x-small;
+    font-weight: bold;
+    border:1px solid #052032
+
+}
+
+.normal-tag{
+    width: fit-content;
+    border-radius: 5px;
+    color:white;
+    background-color: #01101c;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    font-size: x-small;
+    font-weight: bold;
+    border:1px solid #052032,
+
+}
+
+.tag-rollback{
+    display: inline-flex;
+    gap:1rem
+}
+
+.impact{
+    width: 20rem;
+}
+
+.body-container{
+    display: flex;
+    justify-content: space-between;
+}

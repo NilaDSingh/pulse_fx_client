@@ -1,4 +1,4 @@
-import './ImpactCard.css'
+import './PtsCard.css'
 
 
 export default function ImpactCard(impact:any){

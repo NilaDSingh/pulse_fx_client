@@ -1,5 +1,4 @@
 .activity-container{
-   color: #a1a1a1;
    font-size: smaller;
    background-image: radial-gradient(circle at  left,rgba(3, 13, 21, 1) 0%, rgba(48, 51, 55, 1) 100%);
    position: absolute;
@@ -19,4 +18,18 @@
    margin:auto;
    margin-top: 2rem;
    justify-content: center;
+}
+
+.page-title{
+   color:white;
+   margin-top: 2rem;
+   margin-left: 6rem;
+   font-weight: bold;
+   font-size: large;
+}
+
+.page-subtitle{
+   color:#a1a1a1;
+   margin-left: 6rem;
+   margin-top: 0.5rem;
 }

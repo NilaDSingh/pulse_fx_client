@@ -3,7 +3,7 @@ import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import ImpactCard from '../../atoms/ImpactCard/ImpactCard';
+import ImpactCard from '../../atoms/PtsCard/PtsCard';
 import { Button } from '@mui/material';
 import EastIcon from '@mui/icons-material/East';
 import './RecommendedActionsCard.css'
