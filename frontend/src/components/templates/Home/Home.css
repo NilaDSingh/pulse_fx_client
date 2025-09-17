@@ -7,16 +7,10 @@
     font-size: smaller;
 }
 
-.footprint-overview{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.recommendations-header {
-    display: flex;
-    justify-content: space-between;
-    place-items: center;
+.footprint-card-container{
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
 }
 
 .actions-channel-container{
@@ -24,22 +18,22 @@
     justify-content: space-between;
     margin-top: 2rem;
     gap: 1.5rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
 }
 
 .recommended-actions-container{
     width: 95rem;
 }
 
-.connected-channels{
-}
-
 .home-container{
-    margin-top: 2rem;
-    margin-right: 5rem;
-    margin-left: 5rem;
-    /* background: linear-gradient(90deg,rgba(3, 13, 21, 1) 0%, rgba(48, 51, 55, 1) 100%); */
-
+   font-size: smaller;
+   background: linear-gradient(to bottom right, #000911, #31353a);   
+   position: absolute;
+   width: 100%;
+   height: fit-content;
 }
+
 
 .quick-wins-footer{
     display: flex;
@@ -49,4 +43,6 @@
 
 .home-footer{
     margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
 }

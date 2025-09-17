@@ -1,7 +1,7 @@
 .activity-container{
    font-size: smaller;
-   /* background-image: radial-gradient(circle at  left,rgba(3, 13, 21, 1) 0%, rgba(48, 51, 55, 1) 100%); */
-   background: linear-gradient(to bottom right, #000911, #31353a);   position: absolute;
+   background: linear-gradient(to bottom right, #000911, #31353a);   
+   position: absolute;
    width: 100%;
    height: fit-content;
 }

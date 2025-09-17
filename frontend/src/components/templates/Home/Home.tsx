@@ -56,7 +56,7 @@ export default function Home(){
         </div>
         
         </div>
-       <HomeFooter/>
+         <div className='home-footer'><HomeFooter/></div>
     </div>
     )
 }
