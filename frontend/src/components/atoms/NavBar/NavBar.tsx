@@ -43,9 +43,7 @@ const tabStyles1 = {
 
 export default function NavBar() {
   const [currentTab, setCurrentTab] = React.useState(0);
-  const [prevTabName, setPrevTabName] = React.useState('Home');
 
-  const [tabStyle, setTabStyle] =React.useState(tabStyles1);
   let tabTitles = [
     {
       icon: <HomeOutlinedIcon sx={{marginRight:'0.5rem', fontSize:'medium'}}/>,

@@ -145,14 +145,31 @@ export const automationList={
             next_run:'On trigger',
             success_rate:'94%',
             tags:['reviews', 'response','engagement'],
-            requires_approval:true,
             trigger:'Positive review (4-5 stars) recieved',
             priority:'medium',
             status:'active',
             executions: 89, 
             avg_response:2.3,
-            approval:'pending',
-            active:true
+            approval_required: true,
+            active:true,
+            approvals:[
+                {
+                    created:'5 minutes ago',
+                    task:'Thank Customer for 5-Star Review',
+                    risk:'low',
+                    type:'content',
+                    approved:false,
+                    estimated_impact: 'Positive customer engagement, improved response time',
+                    summary_description:'Generated thank-you response for Google Business review',
+                    response:'Thank you so much for the wonderful 5-star review',
+                    platform:'Google',
+                    summary:{
+                        'Response Text': 'Thank you so much for the wonderful 5-star review',
+                        'Platform':'Google Business Profile',
+                        'Review Rating':'5 stars'
+                    }
+                }
+            ]
         },
         {
             title:'Content Performance Optimization',
@@ -160,14 +177,31 @@ export const automationList={
             next_run:'Paused',
             success_rate:'87%',
             tags:['content', 'optimization','analytics'],
-            requires_approval:true,
             trigger:'Engagement rate drops below 2.5%',
             priority:'low',
             status:'paused',
             executions:'23',
             avg_response:2.3,
-            approval:'pending',
-            active:false
+            approval_required:true,
+            active:false,
+            approvals:[
+                {
+                    created:'5 minutes ago',
+                    task:'Thank Customer for 5-Star Review',
+                    risk:'low',
+                    type:'content',
+                    approved:false,
+                    estimated_impact: 'Positive customer engagement, improved response time',
+                    summary_description:'Generated thank-you response for Google Business review',
+                    response:'Thank you so much for the wonderful 5-star review',
+                    platform:'Google',
+                    summary:{
+                        'Response Text': 'Thank you so much for the wonderful 5-star review',
+                        'Platform':'Google Business Profile',
+                        'Review Rating':'5 stars'
+                    }
+                }
+            ]
         },
         {
         title:'Monitor Google Business Profile Rating',
@@ -175,28 +209,129 @@ export const automationList={
         next_run:'Continuous',
         success_rate:'98%',
         tags:['reviews', 'monitoring','critical'],
-        requires_approval:true,
         trigger:'Engagement rate drops below 2.5%',
         priority:'high',
         status:'active',
         executions:'247',
         avg_response:2.3,
-        approval:'approved',
-        active:false
+        approval_required:false,
+        active:false,
+        approvals:[
+            {
+                created:'6 hours ago',
+                task:'Alert: Rating Dropped to 4.2 Stars',
+                risk:'critical',
+                type:'publish',
+                approved:false,
+                estimated_impact: 'Immediate attention needed to prevent further reputation damage',
+                summary_description:'Generated thank-you response for Google Business review',
+                response:'Thank you so much for the wonderful 5-star review',
+                platform:'Google',
+                summary:{
+                    'Previous Rating': '4.7 stars',
+                    'Current Rating:':'4.2 stars',
+                    'Recent Reviews':'3 negative reviews in past 24 hours'
+                    }
+                }
+            ]
         }
     ]
 }
 
-const executionlog=[
+export const liveMonitoring={
+    running:1, 
+    pending:2,
+    completed:1,
+    failed:1,
+    tasks:[
+        {
+            task:'Monitor Google Business Profile Reviews',
+            type:'Monitor Reviews',
+            agent:'Scout',
+            step:'2/4',
+            time:'5m 0s',
+            status:'running',
+            progress:80
+        },
+        {
+            task:'Auto Respond to Social Media Mentions',
+            type:'Send Response',
+            agent:'Liaison',
+            step:'1/3',
+            time:'15m 0s',
+            status:'pending approval',
+            progress:0
+        },
+        {
+            task:'Optimize Website Performance',
+            type:'Performance Analysis',
+            agent:'Analysis',
+            step:'5/5',
+            time:'15m 0s',
+            status:'completed',
+            progress:0
+        },
+        {
+            task:'Update Outdated Business Information',
+            type:'Update Profile',
+            agent:'Curator',
+            step:'2/4',
+            time:'5m 0s',
+            status:'failed',
+            progress:0
+        }
+    ]
+}
+
+export const agents = [
     {
-        task:'Review response posted',
-        triggered:'2 hours ago',
-        time_taken:1.3
+        type:'Scout',
+        status:'active',
+        current_task:'Monitoring competitor mentions',
+        reliability:96,
+        speed:89,
+        accuracy:94,
+        last_active:'2 minutes ago',
+        automations:3,
+        tags:['Web scraping', 'social listening', 'Trend analysis']
     },
     {
-        task:'Profile updated',
-        triggered:'5 hours ago',
-        time_taken:2.1
+        type:'Sentinel',
+        current_task:'Processing review alerts',
+        reliability:98,
+        speed:92,
+        accuracy:97,
+        last_active:'30 minutes ago',
+        automations:5,
+        tags:['Real-time monitoring', 'alert management', 'threat detection']
     }
 ]
 
+export const templates=[
+    {
+        title:'Review Response Automation',
+        level:'beginner',
+        description:'Automatically respond to customer reviews based on sentiment and rating',
+        duration:'10 minutes',
+        uses:'142',
+        tags:['reviews', 'customer service', 'automation'],
+        workflow:{
+            trigger:'New review recieved',
+            conditions:'Rating > 3 stars, Sentiment is positive',
+            actions:'Generate response, Post reply, Log interaction'
+        }
+    },
+    {
+        title:'SEO Health Monitoring',
+        level:'intermediate',
+        description:'Monitor and fix common SEO issues automatically',
+        duration:'25 minutes',
+        uses:'89',
+        tags:['seo', 'website', 'monitoring'],
+        workflow:{
+            trigger:'Weekly schedule',
+            conditions:'Broken links detected, Missing meta descriptions',
+            actions:'Fix links, Generate descriptions, Update sitemap'
+        }
+    }
+]
