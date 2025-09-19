@@ -13,6 +13,7 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import InputAdornment from '@mui/material/InputAdornment';
 import IosShareOutlinedIcon from '@mui/icons-material/IosShareOutlined';
 import { agentMenu, assetMenu } from '../../../services/MockData';
+import { Height } from '@mui/icons-material';
 
 export default function FilterSearch(props:any){
     const [agent, setAgent] = React.useState('All Agents');
@@ -38,11 +39,12 @@ export default function FilterSearch(props:any){
     backgroundColor:'#000c17',
     color:'white',
     "& .MuiOutlinedInput-input": {
-      height: '0.4rem',
+      height: '0rem',
       color:'white',
-      fontSize:'small'
+      fontSize:'small',
     },
-    borderRadius:'10px'
+    borderRadius:'10px',
+    width:'100%'
   }
 
     const dropdownStyle={
@@ -50,8 +52,10 @@ export default function FilterSearch(props:any){
     color:'white',
     fontSize:'small',
     width:'100%',
-    height:'2.5rem',
-    borderRadius:'10px'
+    height:'2rem',
+    borderRadius:'10px',
+    border:'1px solid #052032',
+
   }
 
     const cardStyle={
@@ -64,8 +68,13 @@ export default function FilterSearch(props:any){
         width:'100%',
         textTransform:'none',
         color:'white',
-        fontSize:'small'
+        fontSize:'small',
+        backgroundColor:"#000c17",
+        border:'1px solid #052032',
+        height:'2rem',
+        borderRadius:'10px'
     }
+
     return(
         <Card sx={cardStyle}>
             <CardContent sx={{display:'flex', fontSize:'medium'}}>

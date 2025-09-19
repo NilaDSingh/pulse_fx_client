@@ -131,42 +131,61 @@ export const assetMenu=[
 ]
 
 // data for Automations tab
-const generalInfo={
-        'Active Automations':4,
-        'Pending Approval':'4',
-        'Urgent Items':1,
-        'Active Agents':4,
-        'Success Rate':'94%',
-        'Actions Today':847
-}
-const automationList=[
-    {
-        title:'Auto-respond to Low Risk Reviews',
-        agent:'Liaison',
-        next_run:'On trigger',
-        success_rate:'94%',
-        tags:['reviews', 'response','engagement'],
-        requires_approval:true,
-        trigger:'Positive review (4-5 stars) recieved',
-        priority:'medium',
-        status:'active',
-        executions: 89, 
-        ave_response:2.3
-    },
-    {
-        title:'Content Performance Optimization',
-        agent:'Agent',
-        next_run:'Paused',
-        success_rate:'87%',
-        tags:['content', 'optimization','analytics'],
+export const automationList={
+    active_automations:4,
+    pending_approvals:4,
+    urgent:1,
+    active:4,
+    success_rate:'94%',
+    actions_today:847,
+    automations:[
+        {
+            title:'Auto-respond to Low Risk Reviews',
+            agent:'Liaison',
+            next_run:'On trigger',
+            success_rate:'94%',
+            tags:['reviews', 'response','engagement'],
+            requires_approval:true,
+            trigger:'Positive review (4-5 stars) recieved',
+            priority:'medium',
+            status:'active',
+            executions: 89, 
+            avg_response:2.3,
+            approval:'pending',
+            active:true
+        },
+        {
+            title:'Content Performance Optimization',
+            agent:'Analyst',
+            next_run:'Paused',
+            success_rate:'87%',
+            tags:['content', 'optimization','analytics'],
+            requires_approval:true,
+            trigger:'Engagement rate drops below 2.5%',
+            priority:'low',
+            status:'paused',
+            executions:'23',
+            avg_response:2.3,
+            approval:'pending',
+            active:false
+        },
+        {
+        title:'Monitor Google Business Profile Rating',
+        agent:'Sentinel',
+        next_run:'Continuous',
+        success_rate:'98%',
+        tags:['reviews', 'monitoring','critical'],
         requires_approval:true,
         trigger:'Engagement rate drops below 2.5%',
-        priority:'low',
-        status:'paused',
-        executions:'23',
-        avg_response:2.3
-    }
-]
+        priority:'high',
+        status:'active',
+        executions:'247',
+        avg_response:2.3,
+        approval:'approved',
+        active:false
+        }
+    ]
+}
 
 const executionlog=[
     {

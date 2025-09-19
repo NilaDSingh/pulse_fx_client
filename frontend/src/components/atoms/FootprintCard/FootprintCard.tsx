@@ -2,7 +2,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import LinearProgress from '@mui/material/LinearProgress';
@@ -27,7 +27,7 @@ export default function FootPrint(){
         {
             cardTitle:'Strong Channels',
             value: 3,
-            icon:<CheckCircleOutlineIcon />,
+            icon:<TaskAltOutlinedIcon />,
             desc:'80+ score'
         },
         {

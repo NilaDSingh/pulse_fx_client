@@ -1,3 +1,20 @@
 .automations-container{
-    background: linear-gradient(to bottom right, #000911, #31353a);   
+    background: linear-gradient(to bottom right, #000911, #31353a); 
+    position: absolute;
+    width: 100%;
+    height: fit-content;  
+}
+
+.automations-subtitle{
+    color: #a1a1a1;
+    margin-top: 2rem;
+    margin-left: 6rem;
+}
+
+.status-cards{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
 }
