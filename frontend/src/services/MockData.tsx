@@ -335,3 +335,11 @@ export const templates=[
         }
     }
 ]
+
+export const statusMenu = [
+    'All Status',
+    'Active',
+    'Paused',
+    'Draft',
+    'Error'
+]

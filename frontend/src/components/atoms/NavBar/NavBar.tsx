@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { Tabs, Tab, Box, Typography, makeStyles, Divider } from '@mui/material';
 import { useState } from 'react';
-import { color } from 'framer-motion';
+import { Tabs, Tab, Box, Typography, makeStyles, Divider } from '@mui/material';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import WatchLaterOutlinedIcon from '@mui/icons-material/WatchLaterOutlined';

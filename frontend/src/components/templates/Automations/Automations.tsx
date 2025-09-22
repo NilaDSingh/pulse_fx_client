@@ -7,12 +7,17 @@ import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined';
 import TaskAltOutlinedIcon from '@mui/icons-material/TaskAltOutlined';
 import CandlestickChartOutlinedIcon from '@mui/icons-material/CandlestickChartOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+
 import './Automations.css'
 // replace with fetched data
 import {automationList} from '../../../services/MockData'
-
+import AutomationsAutomation from '../../molecules/AutomationsAutomation/AutomationsAutomation'
 export default function Automations(){
-    
+    const [textfield, setTextField] =React.useState('')
     const [automationsCardData, setAutomationsCardData] =React.useState(
         [
             {
@@ -47,7 +52,27 @@ export default function Automations(){
             }
         ]
     )
+    const [currentTab, setCurrentTab] = React.useState(0);
+    const tabTitles=['Automations', 'Approvals', 'Live Monitoring', 'Builder', 'Agents', 'Templates']
 
+    const buttonStyle={
+        color:'#a1a1a1',
+        textTransform:'none',
+        justifyContent:'center',
+        fontSize:'small',
+        border:'none',
+        borderRadius:'15px',
+        backgroundColor:'#031826',
+        width:'14vw'
+    }
+
+    const setTextFilter = (event:any) => {
+        setTextField(event?.target.value)
+    }
+    
+    const selectCurrentTab = (i:number) => {
+        setCurrentTab(i)
+    }
     return(
         <div className='automations-container'>
             <div className='automations-subtitle'>Manage workflows, approve changes, and monitor AI agents</div>
@@ -61,6 +86,30 @@ export default function Automations(){
                 )
                 })
             }
+            </div>
+            <div className='automation-tabs'>
+                <Box>
+                    <ButtonGroup sx={{display: 'flex', justifyContent:'center'}}>
+                        {
+                        tabTitles.map((tab:string, i:number)=>{
+                            return(<Button disableRipple onClick={()=>{selectCurrentTab(i)}} sx={buttonStyle}>{tab}</Button>)
+                        })
+                        }
+                    </ButtonGroup>
+                </Box>
+            </div>
+            {currentTab === 0 ? (<AutomationsAutomation/>):(<></>)}
+            {currentTab === 1 ? (<></>):(<></>)}
+            {currentTab === 2 ? (<></>):(<></>)}
+            {currentTab === 3 ? (<></>):(<></>)}
+            {currentTab === 4 ? (<></>):(<></>)}
+            {currentTab === 5 ? (<></>):(<></>)}
+            <div>
+                {/* <TextField
+                placeholder='Search automations...'
+                value={textfield}
+                onChange={setTextFilter}
+                ></TextField> */}
             </div>
         </div>
     )
