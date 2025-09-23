@@ -9,8 +9,8 @@
 
 .footprint-card-container{
     margin-top: 2rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 7vw;
+    margin-right: 7vw;
 }
 
 .actions-channel-container{
@@ -18,8 +18,8 @@
     justify-content: space-between;
     margin-top: 2rem;
     gap: 1.5rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 7vw;
+    margin-right: 7vw;
 }
 
 .recommended-actions-container{
@@ -43,6 +43,6 @@
 
 .home-footer{
     margin-top: 2rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 7vw;
+    margin-right: 7vw;
 }

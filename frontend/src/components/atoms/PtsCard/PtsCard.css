@@ -1,4 +1,4 @@
-.high-impact{
+.high-boost{
     background-color: #190c14;
     font-size: xx-small;
     width: fit-content;
@@ -14,7 +14,7 @@
     padding-bottom: 0.2rem;
 }
 
-.normal-impact{
+.medium-boost{
     background-color: #181a0f;
     font-size: xx-small;
     width: fit-content;
@@ -30,7 +30,7 @@
     padding-bottom: 0.2rem;
 }
 
-.category{
+.minor-boost{
     background-color: #04152a;
     font-size: xx-small;
     width: fit-content;

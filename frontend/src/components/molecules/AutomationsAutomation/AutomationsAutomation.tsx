@@ -10,7 +10,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-
+import AutomationCard from '../../atoms/AutomationCard/AutomationCard';
 import {automationList, agentMenu, statusMenu} from '../../../services/MockData'
 
 export default function AutomationsAutomations(){
@@ -18,13 +18,7 @@ export default function AutomationsAutomations(){
     const [textfield, setTextField] = React.useState('');
     const [agent, setAgent] = React.useState('All Agents');
     const [status, setStatus] = React.useState('All Status');
-    
-    const cardStyle={
-        backgroundColor:"#000812",
-        border:1,
-        borderColor:'#052032',
-        borderRadius: '15px'
-    }
+    const [data, setdata] = React.useState(automationList);
     
     const textStyle={
     backgroundColor:'#000c17',
@@ -97,10 +91,10 @@ export default function AutomationsAutomations(){
             </Select>
 
         </div>
-    <Card sx={cardStyle}>
-        <CardContent>
-            
-        </CardContent>
-    </Card>
+            {data.automations.map((d:any)=>{
+                return(
+                    <div><AutomationCard data={d}/></div>
+                )
+            })}
     </div>
 )}

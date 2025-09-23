@@ -1,8 +1,6 @@
 .filters{
     display: flex;
     justify-content: space-between;
-    margin-right: 8vw;
-    margin-left: 8vw;
     margin-top:2rem;
     gap:1vw;
     margin-bottom: 2rem;

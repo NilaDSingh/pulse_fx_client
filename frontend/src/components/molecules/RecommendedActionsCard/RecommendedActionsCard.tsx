@@ -12,7 +12,7 @@ import './RecommendedActionsCard.css'
 export default function RecommendedActionsCard(data: any){
     // must change warning icon with appropriate logic
     const [button, setShowButton] = React.useState(false)
-    const [titleHover, setTitleHover] = React.useState('title')
+    const [titleHover, setTitleHover] = React.useState('title-normal')
 
     const cardStyle = {
         border:'1px solid #052032',
@@ -49,7 +49,7 @@ export default function RecommendedActionsCard(data: any){
             setTitleHover('title-hover')
         }
         else{
-            setTitleHover('title')
+            setTitleHover('title-normal')
         }
     }
 
@@ -63,7 +63,7 @@ export default function RecommendedActionsCard(data: any){
             <CardContent sx={{display:'flex', justifyContent:'space-between', placeItems:'center'}}>
                 <div>
                     <div className='first-line'>
-                    <ImpactCard impact={data.data.pts}></ImpactCard>
+                    <div><ImpactCard impact={data.data.pts}></ImpactCard></div>
                     <Typography sx={cardSpecStyle}>{data.data.time}</Typography>
                     </div>
                     <div className={titleHover}><h4>{data.data.title}</h4></div>

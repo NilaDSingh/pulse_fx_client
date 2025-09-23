@@ -15,10 +15,15 @@
     display: flex;
     justify-content: space-around;
     margin-top: 2rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
+    margin-left: 7vw;
+    margin-right: 7vw;
 }
 
 .automation-tabs{
     margin-top: 1rem;
+}
+
+.automations-tab{
+    margin-right: 7vw;
+    margin-left: 7vw;
 }

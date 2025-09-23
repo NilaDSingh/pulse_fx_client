@@ -98,18 +98,13 @@ export default function Automations(){
                     </ButtonGroup>
                 </Box>
             </div>
-            {currentTab === 0 ? (<AutomationsAutomation/>):(<></>)}
+            {currentTab === 0 ? (<div className = 'automations-tab'><AutomationsAutomation/></div>):(<></>)}
             {currentTab === 1 ? (<></>):(<></>)}
             {currentTab === 2 ? (<></>):(<></>)}
             {currentTab === 3 ? (<></>):(<></>)}
             {currentTab === 4 ? (<></>):(<></>)}
             {currentTab === 5 ? (<></>):(<></>)}
             <div>
-                {/* <TextField
-                placeholder='Search automations...'
-                value={textfield}
-                onChange={setTextFilter}
-                ></TextField> */}
             </div>
         </div>
     )
