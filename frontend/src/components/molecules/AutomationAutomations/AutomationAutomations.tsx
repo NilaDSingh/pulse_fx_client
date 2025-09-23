@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
-import './AutomationsAutomation.css'
+import './AutomationAutomations.css'
 
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
@@ -11,6 +11,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import AutomationCard from '../../atoms/AutomationCard/AutomationCard';
+
+// replace below with fetch to get data
 import {automationList, agentMenu, statusMenu} from '../../../services/MockData'
 
 export default function AutomationsAutomations(){
@@ -40,20 +42,21 @@ export default function AutomationsAutomations(){
     height:'2rem',
     borderRadius:'10px',
     border:'1px solid #052032',
-
   }
-
 
       const handleTextfieldChange = (event:any) => {
         setTextField(event.target.value)
+        //call function to request state change in data for inputted value
   };
 
       const handleAgentChange = (event:any) => {
         setAgent(event.target.value)
+        //call function to request state change in data for inputted value
   };
 
         const handleStatusChange = (event:any) => {
-        setAgent(event.target.value)
+        setStatus(event.target.value)
+        //call function to request state change in data for inputted value
   };
 
     return(

@@ -17,7 +17,6 @@ import HomeFooter from '../../molecules/HomeFooter/HomeFooter';
 import './Home.css'
 
 export default function Home(){
-    console.log('home',connectedChannels)
     return(
     <div className='home-container'>
         <div className='footprint-overview'>

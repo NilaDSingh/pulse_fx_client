@@ -21,7 +21,6 @@ export default function StatusCard(automationCardData:any){
         placeItems:'center',
         borderRadius:'10px',
     }
-    console.log('status card',automationCardData.data)
     return(
         <Card sx={cardStyle}>
             <CardContent>

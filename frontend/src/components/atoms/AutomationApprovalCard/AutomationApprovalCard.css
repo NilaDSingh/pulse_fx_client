@@ -1,0 +1,15 @@
+.task{
+    color:white;
+}
+
+.details{
+    color:#a1a1a1;
+    font-size: small;
+    margin-top:2vh;
+}
+
+.details-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2vw;
+}

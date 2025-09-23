@@ -9,13 +9,14 @@ import CandlestickChartOutlinedIcon from '@mui/icons-material/CandlestickChartOu
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import Box from '@mui/material/Box';
 
 import './Automations.css'
 // replace with fetched data
 import {automationList} from '../../../services/MockData'
-import AutomationsAutomation from '../../molecules/AutomationsAutomation/AutomationsAutomation'
+import AutomationsAutomation from '../../molecules/AutomationAutomations/AutomationAutomations'
+import AutomationApprovals from '../../molecules/AutomationApprovals/AutomationApprovals'
+
 export default function Automations(){
     const [textfield, setTextField] =React.useState('')
     const [automationsCardData, setAutomationsCardData] =React.useState(
@@ -99,7 +100,7 @@ export default function Automations(){
                 </Box>
             </div>
             {currentTab === 0 ? (<div className = 'automations-tab'><AutomationsAutomation/></div>):(<></>)}
-            {currentTab === 1 ? (<></>):(<></>)}
+            {currentTab === 1 ? (<div className = 'approval-tab'><AutomationApprovals/></div>):(<></>)}
             {currentTab === 2 ? (<></>):(<></>)}
             {currentTab === 3 ? (<></>):(<></>)}
             {currentTab === 4 ? (<></>):(<></>)}

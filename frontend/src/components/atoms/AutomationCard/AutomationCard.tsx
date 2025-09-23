@@ -63,7 +63,6 @@ export default function AutomationCard(automations:any){
         }
     }
 
-    console.log('a',automations.data)
     return(
         <div>
         <Card sx={cardStyle}>

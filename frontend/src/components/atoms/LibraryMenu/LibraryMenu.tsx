@@ -58,7 +58,6 @@ export default function BasicMenu() {
 
   // selects menu option and closes menu
   const setOption = (option:string) => {
-    console.log("item selected", option)
     setSelectedOption(option)
     handleClose()
 

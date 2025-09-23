@@ -20,8 +20,6 @@ export default function ChannelHealth(data:any){
         height:'35rem'
     }
     
-    console.log('Channel health')
-
     return(
     <div className='channel-health-container'>
         <Card sx={channelCardStyle}>
