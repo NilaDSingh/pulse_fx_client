@@ -161,7 +161,7 @@ export const automationList={
                     type:'content',
                     approved:false,
                     estimated_impact: 'Positive customer engagement, improved response time',
-                    response:'Thank you so much for the wonderful 5-star review',
+                    changes_summary:'Thank you so much for the wonderful 5-star review',
                     platform:'Google',
                     summary:{
                         'Response Text': 'Thank you so much for the wonderful 5-star review',
@@ -193,7 +193,7 @@ export const automationList={
                     type:'content',
                     approved:false,
                     estimated_impact: 'Positive customer engagement, improved response time',
-                    response:'Thank you so much for the wonderful 5-star review',
+                    changes_summary:'Thank you so much for the wonderful 5-star review',
                     platform:'Google',
                     summary:{
                         'Response Text': 'Thank you so much for the wonderful 5-star review',
@@ -226,7 +226,7 @@ export const automationList={
                 approved:false,
                 estimated_impact: 'Immediate attention needed to prevent further reputation damage',
                 summary_description:'Generated thank-you response for Google Business review',
-                response:'Thank you so much for the wonderful 5-star review',
+                changes_summary:'Thank you so much for the wonderful 5-star review',
                 platform:'Google',
                 summary:{
                     'Previous Rating': '4.7 stars',

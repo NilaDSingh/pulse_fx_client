@@ -27,3 +27,16 @@
     margin-right: 7vw;
     margin-left: 7vw;
 }
+
+
+.card-subtitle{
+    color:white;
+    font-size: small;
+}
+
+.impact-summary{
+    color:#a1a1a1;
+    font-size: small;
+    margin-top: 1vh;
+
+}

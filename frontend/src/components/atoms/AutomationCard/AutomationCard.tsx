@@ -11,7 +11,7 @@ import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
 import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 import TrendingUpOutlinedIcon from '@mui/icons-material/TrendingUpOutlined';
-
+import Badge from '../../atoms/Badge/Badge';
 import './AutomationCard.css'
 
 export default function AutomationCard(automations:any){
@@ -63,6 +63,7 @@ export default function AutomationCard(automations:any){
         }
     }
 
+
     return(
         <div>
         <Card sx={cardStyle}>
@@ -75,13 +76,8 @@ export default function AutomationCard(automations:any){
                             <div className='card-header'>
                                 <div className='title-badges'>
                                     <div className='automation-title'>{automations.data.title}</div>
-                                    <div className={badgeStyle(automations.data.priority)}>{automations.data.priority}</div>
-                                    <div className={badgeStyle(automations.data.status)}>
-                                        {automations.data.status === 'active'? <PlayArrowOutlinedIcon sx={iconStyle}/>:<></>}
-                                        {automations.data.status === 'paused'? <PauseIcon sx={iconStyle}/>:<></>}
-                                        {automations.data.status === 'draft'? <FeedOutlinedIcon sx={iconStyle}/>:<></>}
-                                        {automations.data.status}
-                                    </div>
+                                    <Badge data={automations.data.priority}></Badge>
+                                    <Badge data={automations.data.status}></Badge>
                                 </div>
                                 <div className='icons'>
                                     <CircleIcon sx={iconStyle}/>
