@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
-
+import Divider from '@mui/material/Divider';
 import './AutomationApprovalCard.css'
 import { 
     Button,
@@ -10,7 +10,9 @@ import {
  import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import CheckOutlinedIcon from '@mui/icons-material/CheckOutlined';
-
+import CircleIcon from '@mui/icons-material/Circle';
+import Badge from '../../atoms/Badge/Badge'
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 export default function AutomationApprovalCard(automation:any){
     console.log('approvals',automation.data?.approvals[0])
     
@@ -43,19 +45,35 @@ export default function AutomationApprovalCard(automation:any){
         fontSize:'medium'
     }
 
+    const rollbackStyle={
+        color:'#a1a1a1',
+        fontSize:'x-small',
+        textTransform:'none',
+        width:'fit-content',
+        height:'4vh'
+    }
     return(
         <div>
            <Card sx={cardStyle}>
             <CardContent>
+                <div>
                 <div style={{display:'flex', justifyContent:'space-between'}}>
                     <div style={{width:'75%'}}>
                     {
                         automation.data?.approvals.map((d:any)=>{
                             let keys = Object.keys(d.summary)
-                            console.log(keys)
+                            console.log(d)
                             return(
-                            <div>
-                                    <div className='task'>{d.task}</div>
+                            <div>   <div style={{display:'flex', gap:'1vw'}}>
+                                        <div className='task'>
+                                            {d.task}
+                                        </div>
+                                        <div style={{display:'flex', gap:'1vw'}}>
+                                            <Badge data={d.risk}></Badge>
+                                            <Badge data={d.task_priority}></Badge>
+                                            <Badge data={automation.data.agent}></Badge>
+                                        </div>
+                                    </div>
                                     <div className='details-container'>
                                         <div className='details'><b>Automation:</b> {automation.data.title}</div>
                                         <div className='details'><b>Type:</b> {d.type}</div>
@@ -87,6 +105,12 @@ export default function AutomationApprovalCard(automation:any){
                         <div><Button startIcon={<RemoveRedEyeOutlinedIcon style={iconStyle}/>} sx={buttonStyle('preview')}>Preview</Button></div>
                         <div><Button startIcon={<ClearOutlinedIcon style={iconStyle}/>} sx={buttonStyle('reject')}>Reject</Button></div>
                         <div><Button startIcon={<CheckOutlinedIcon style={iconStyle}/>} sx={buttonStyle('approve')}>Approve</Button></div>
+                    </div>
+                </div>
+                    <Divider style={{ background: '#052032', marginTop:'3vh' }} ></Divider>
+                    <div style={{display:'flex', justifyContent:'space-between', placeItems:'center'}}>
+                        <div className='platform'>{automation.data.platform} <CircleIcon sx={{fontSize:'5px', color:'#a1a1a1'}}/> {automation.data.items} Items</div>
+                        <div><Button sx={rollbackStyle} startIcon={<RestartAltIcon style={iconStyle}/>} >Rollback</Button></div>
                     </div>
                 </div>
             </CardContent>

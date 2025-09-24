@@ -153,16 +153,18 @@ export const automationList={
             avg_response:2.3,
             approval_required: true,
             active:true,
+            platform:'Google',
+            items:2,
             approvals:[
                 {
                     created:'5 minutes ago',
                     task:'Thank Customer for 5-Star Review',
-                    risk:'low',
+                    risk:'medium risk',
+                    task_priority:'medium',
                     type:'content',
                     approved:false,
                     estimated_impact: 'Positive customer engagement, improved response time',
                     changes_summary:'Thank you so much for the wonderful 5-star review',
-                    platform:'Google',
                     summary:{
                         'Response Text': 'Thank you so much for the wonderful 5-star review',
                         'Platform':'Google Business Profile',
@@ -185,16 +187,18 @@ export const automationList={
             avg_response:2.3,
             approval_required:true,
             active:false,
+            platform:'Google',
+            items:10,           
             approvals:[
                 {
                     created:'5 minutes ago',
                     task:'Thank Customer for 5-Star Review',
-                    risk:'low',
+                    risk:'low risk',
+                    task_priority:'medium',
                     type:'content',
                     approved:false,
                     estimated_impact: 'Positive customer engagement, improved response time',
                     changes_summary:'Thank you so much for the wonderful 5-star review',
-                    platform:'Google',
                     summary:{
                         'Response Text': 'Thank you so much for the wonderful 5-star review',
                         'Platform':'Google Business Profile',
@@ -217,11 +221,14 @@ export const automationList={
         avg_response:2.3,
         approval_required:false,
         active:false,
+        platform:'Google',
+        items:15,
         approvals:[
             {
                 created:'6 hours ago',
                 task:'Alert: Rating Dropped to 4.2 Stars',
-                risk:'critical',
+                risk:'critical risk',
+                task_priority:'urgent',
                 type:'publish',
                 approved:false,
                 estimated_impact: 'Immediate attention needed to prevent further reputation damage',

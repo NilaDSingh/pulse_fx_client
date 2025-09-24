@@ -95,7 +95,7 @@ export default function AutomationCard(automations:any){
                                 <div className='tag-container'>
                                     {automations.data.tags.map((tag:string)=>{
                                         return(
-                                        <div className={badgeStyle(tag)}>{tag}</div>
+                                        <Badge data={tag}></Badge>
                                     )
                                     })}
                                 </div>

@@ -6,8 +6,6 @@ import {
     CardContent
 } from '@mui/material';
 import './StatusCard.css'
-import { Widgets } from '@mui/icons-material';
-import { resize } from 'framer-motion';
 
 
 

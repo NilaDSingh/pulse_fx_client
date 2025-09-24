@@ -16,7 +16,7 @@ export default function Badge (badgeType:any){
     const badgeStyle = (text:string) => {
         if(text==='low'){
             return 'low-priority'
-        }else if(text==='medium'){
+        }else if(text==='medium' || text==='medium risk'){
             return 'medium-priority'
         }else if(text==='high'){
             return 'high-priority'
@@ -26,7 +26,15 @@ export default function Badge (badgeType:any){
             return 'paused-badge'
         }else if(text==='draft'){
             return 'draft-badge'
-        }else{
+        }else if(text==='low risk'){
+            return 'low-risk'
+        }else if(text==='critical risk'){
+            return 'critical-risk'
+        }
+        else if(text==='urgent'){
+            return 'urgent-badge'
+        }
+        else{
             return 'tag'
         }
     }
